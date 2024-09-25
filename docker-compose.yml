@@ -34,16 +34,18 @@ services:
       postgres_db:
         condition: service_healthy
 
-  feedback_app-frontend:
+  feedback_app_frontend:
     image: kuigan/feedback-app-frontend:latest
     container_name: feedback-app-frontend
+    entrypoint:
+      - FEEDBACK-BACKEND-HOST=feedback-app
+      - FEEDBACK-BACKEND-PORT=3000
     networks:
       - feedback-app-nw
     ports:
-      - "3000:80"
+      - "80:80"
     depends_on:
-      postgres_db:
-        condition: service_healthy
+      - feedback_app
 
 networks:
   feedback-app-nw:
