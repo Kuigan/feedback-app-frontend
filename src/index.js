@@ -1,10 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'; // Importiert das React-Framework
+import ReactDOM from 'react-dom/client'; // Importiert die neue Root-API von React für das Rendern in der DOM
+import './index.css'; // Importiert die globale CSS-Datei für Styling
+import App from './App'; // Importiert die Haupt-App-Komponente
+import reportWebVitals from './reportWebVitals'; // Importiert die Performance-Tracking-Funktion (Web Vitals)
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root')); // Erstellt die Root-Rendering-Instanz, die an das DOM-Element mit der ID 'root' gebunden ist.
 root.render(
   <React.StrictMode>
     <App />
